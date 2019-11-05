@@ -1,10 +1,7 @@
 const mapsControl = {};
 
 (function(){
-  var map;
-  var markers = [];
-  var markersCount = 0;
-  var labels = ['Gateway','FixPoint','Cow','EVAL'];
+
   function createMap(){
     map = new google.maps.Map(document.getElementById('map'), {
       center: {lat: -12.77, lng: -47.92},
