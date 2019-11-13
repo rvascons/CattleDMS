@@ -1,0 +1,16 @@
+DEFAULT VOID:
+    - Usuario entra com as posicoes dos 3 pontos fixos, atualiza a pasta fix points no firebase, e a 
+    ESP manda isso para a EVAL, para ela atualizar a matriz de posicao para referencia.
+
+DEFAULT LOOP:
+    - ESP CHECA POR EVENTOS.
+    - A ESP entra na pasta de collars do firebase, checa se existe algum collar registrado entao, para
+    filho do diretorio, ele pega o id e faz uma requisicao.
+
+EVENTS:
+    . LOOK UP:
+        - pega o id na requisicao e pega a localizacao dela
+    . LOCK / UNLOCK
+        - recebe um requisicao na pasta request, pega o id da requisicao, altera o status da request
+        para open e manda para a coleira especificada uma ordem de liberacao;
+        - no lock, acontece a msm coisa, so que agora 
